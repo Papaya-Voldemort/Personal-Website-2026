@@ -1,0 +1,32 @@
+:root {
+  /* Radius */
+  --btn-radius: 6px;
+
+  /* Color */
+  --primary: #afff5e;
+  --primary-hover: #d6feaf;
+
+  --secondary: #5eff63;
+  --secondary-hover: #cdfbcf;
+
+  --neutral: #c7d0c0; 
+  --neutral-hover: #c7d0c0;
+
+  /* Font */
+  --ft-xl: 2rem;
+  --ft-lg: 1.5rem;
+  --ft-md: 1.2rem;
+  --ft-sm: 0.8rem;
+  --ft-xs: 0.6rem;
+  /* TODO: Add fun fonts! */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
