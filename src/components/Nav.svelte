@@ -1,3 +1,5 @@
+<!-- Nav.svelte - Navigation + Header file -->
+
 <script>
   let { links = ["test", "test2", "test3"] } = $props();
 </script>
@@ -99,7 +101,6 @@
       letter-spacing: 0.04em;
     }
     100% {
-      /* The final step seamlessly cycles back into the 0% step */
       font-family: "Inter", sans-serif;
       transform: translateY(2px) rotate(1deg);
       letter-spacing: -0.01em;

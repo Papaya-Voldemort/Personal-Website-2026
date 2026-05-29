@@ -1,5 +1,9 @@
 <script>
   import Nav from "./components/Nav.svelte";
+  import About from "./components/About.svelte";
+  import Project from "./components/Project.svelte";
+
+  const navigationLinks = ["about", "projects", "experience", "contact"];
 </script>
 
 <svelte:head>
@@ -11,7 +15,9 @@
 </svelte:head>
 
 <main>
-  <Nav />
+  <Nav links={navigationLinks}/>
+  <About />
+  <Project />
 </main>
 
 <style>
