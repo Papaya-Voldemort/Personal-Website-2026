@@ -1,24 +1,74 @@
 :root {
-  /* Radius */
-  --btn-radius: 6px;
+  --btn-radius: 4px;
 
-  /* Color */
-  --primary: #afff5e;
-  --primary-hover: #d6feaf;
+  --border-thick: 4px solid #000000;
+  --border-thin: 2px solid #000000;
 
-  --secondary: #5eff63;
-  --secondary-hover: #cdfbcf;
+  --shadow-flat: 6px 6px 0px 0px #000000;
+  --shadow-flat-hover: 9px 9px 0px 0px #000000;
+  --shadow-flat-active: 0px 0px 0px 0px #000000;
 
-  --neutral: #c7d0c0; 
-  --neutral-hover: #c7d0c0;
+  --bg-color: #f7f6f0;
+  --text-color: #000000;
 
-  /* Font */
-  --ft-xl: 2rem;
+  --theme-green: #afff5e;
+  --theme-green-hover: #c4ff80;
+
+  --theme-pink: #ff6eb9;
+  --theme-pink-hover: #ff94cc;
+
+  --theme-yellow: #ffee54;
+  --theme-yellow-hover: #fff180;
+
+  --theme-blue: #5ee9ff;
+  --theme-blue-hover: #85efff;
+
+  --primary: var(--theme-green);
+  --primary-hover: var(--theme-green-hover);
+  --secondary: #000000;
+
+  --font-body: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-heading: "Bebas Neue", sans-serif;
+  --font-mono: "Courier Prime", monospace;
+
+  --ft-2xl: 4rem;
+  --ft-xl: 2.5rem;
   --ft-lg: 1.5rem;
-  --ft-md: 1.2rem;
-  --ft-sm: 0.85rem;
-  --ft-xs: 0.6rem;
-  /* TODO: Add fun fonts! */
+  --ft-md: 1.15rem;
+  --ft-sm: 0.95rem;
+  --ft-xs: 0.75rem;
+
+  scroll-behavior: smooth;
+}
+
+[data-theme="pink"] {
+  --primary: var(--theme-pink);
+  --primary-hover: var(--theme-pink-hover);
+}
+
+[data-theme="yellow"] {
+  --primary: var(--theme-yellow);
+  --primary-hover: var(--theme-yellow-hover);
+}
+
+[data-theme="blue"] {
+  --primary: var(--theme-blue);
+  --primary-hover: var(--theme-blue-hover);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
 }
 
 a {
@@ -26,7 +76,27 @@ a {
   color: inherit;
 }
 
-body {
-  margin: 0;
-  padding: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+::selection {
+  background-color: var(--primary);
+  color: #000000;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
