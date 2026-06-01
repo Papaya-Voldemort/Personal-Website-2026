@@ -20,6 +20,26 @@
       skills: ["Git & GitHub", "Cargo", "npm", "bun", "Railway", "Linux Shell"],
     },
   ];
+
+  const skillIcons: Record<string, string> = {
+    "HTML5": "html.svg",
+    "CSS3 / SCSS": "css.svg",
+    "JavaScript": "javascript.svg",
+    "TypeScript": "typescript.svg",
+    "Svelte 5": "svelte.svg",
+    "Vite": "vite.svg",
+    "Rust": "rust.svg",
+    "Python": "python.svg",
+    "Java": "java.svg",
+    "Godot": "godot.svg",
+    "Lua": "lua.svg",
+    "Git & GitHub": "git.svg",
+    "Cargo": "cargo.svg",
+    "npm": "npm.svg",
+    "bun": "bun.svg",
+    "Railway": "railway.svg",
+    "Linux Shell": "bash.svg",
+  };
 </script>
 
 <section class="skills-section" id="skills">
@@ -35,7 +55,14 @@
           <div class="tags">
             {#each category.skills as skill}
               <div class="tag">
-                {skill}
+                {#if skillIcons[skill]}
+                  <img
+                    src={`src/assets/icons/${skillIcons[skill]}`}
+                    alt={skill}
+                    class="tag-icon"
+                  />
+                {/if}
+                <span>{skill}</span>
               </div>
             {/each}
           </div>
@@ -110,6 +137,9 @@
   }
 
   .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     font-family: var(--font-mono);
     font-size: var(--ft-sm);
     font-weight: 700;
@@ -130,4 +160,12 @@
     transform: translate(-2px, -2px) rotate(1.5deg);
     box-shadow: 4px 4px 0px #000000;
   }
+
+  .tag-icon {
+    width: 16px;
+    height: 16px;
+    display: block;
+    object-fit: contain;
+  }
 </style>
+

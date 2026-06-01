@@ -322,6 +322,7 @@
   .sticker-icon {
     width: 24px;
     height: 24px;
+    filter: brightness(0);
   }
 
   @media (max-width: 992px) {

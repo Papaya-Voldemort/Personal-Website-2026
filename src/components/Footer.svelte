@@ -5,20 +5,17 @@
 <footer>
   <div class="container">
     <div class="socials">
-      <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn">
+      <a
+        href="https://github.com/papaya-voldemort"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-btn"
+      >
         GitHub
       </a>
-      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn">
-        LinkedIn
-      </a>
-      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn">
-        Twitter
-      </a>
-      <a href="mailto:eli@example.com" class="social-btn">
-        Email
-      </a>
+      <a href="mailto:elinelson992@gmail.com" class="social-btn"> Email </a>
     </div>
-    
+
     <div class="meta">
       <p>&copy; {currentYear} Eli Nelson. Built with Svelte 5.</p>
     </div>
@@ -59,7 +56,10 @@
     border: var(--border-thin);
     border-radius: var(--btn-radius);
     box-shadow: 3px 3px 0px #000000;
-    transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
+    transition:
+      transform 0.1s ease,
+      box-shadow 0.1s ease,
+      background-color 0.1s ease;
   }
 
   .social-btn:hover {
